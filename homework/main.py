@@ -2,7 +2,6 @@ from typing import List
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from sqlalchemy.future import select
-
 import models
 import schemas
 from database import engine, session
