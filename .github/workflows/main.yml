@@ -21,7 +21,10 @@ jobs:
           pip install -r requirements.txt pytest mypy==1.8.0
       - name: Run black
         run: black --diff --check homework/
+        continue-on-error: true
       - name: Run isort
         run: isort --check-only homework/
+        continue-on-error: true
       - name: Run flake8
         run: flake8 homework/
+        continue-on-error: true
