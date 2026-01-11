@@ -20,7 +20,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt pytest mypy==1.8.0 black isort flake8
       - name: Run mypy
-        run: mypy --no-cache homework/
+        run: mypy homework/
 
       - name: Run black
         run: black --diff --check homework/
