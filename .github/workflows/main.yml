@@ -21,7 +21,7 @@ jobs:
           pip install -r requirements.txt
           pip install pytest mypy black isort flake8
       - name: Run mypy
-        run: mypy homework/
+        run: mypy --cache-dir=/tmp/mypy_cache homework/
       - name: Run black
         run: black --diff --check homework/
       - name: Run isort
