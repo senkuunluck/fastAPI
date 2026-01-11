@@ -21,7 +21,7 @@ app = FastAPI(lifespan=lifespan)
 
 
 @app.post('/recipes/', response_model=schemas.RecipeOut)
-async def recipes(recipe: schemas.RecipeIn) -> models.Recipe:
+async def recipes2(recipe: schemas.RecipeIn) -> models.Recipe:
     new_recipe = models.Recipe(**recipe.dict())
     async with session.begin():
         session.add(new_recipe)
