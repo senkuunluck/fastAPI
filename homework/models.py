@@ -1,6 +1,5 @@
 from sqlalchemy import Column, String, Integer
 from database import Base
-import os
 
 class Recipe(Base):
     __tablename__ = 'Recipes'
